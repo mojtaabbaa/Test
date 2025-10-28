@@ -1,0 +1,370 @@
+/* Elementor Pro Addons Frontend Styles */
+
+/* Advanced Heading Widget */
+.epa-advanced-heading {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Info Box Widget */
+.epa-info-box-wrapper {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.epa-info-box-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.epa-info-box-icon {
+    margin-bottom: 20px;
+}
+
+.epa-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.epa-view-stacked .epa-icon {
+    background-color: #6ec1e4;
+    color: #fff;
+}
+
+.epa-view-framed .epa-icon {
+    border: 3px solid #6ec1e4;
+    color: #6ec1e4;
+}
+
+.epa-shape-circle .epa-icon {
+    border-radius: 50%;
+}
+
+.epa-shape-square .epa-icon {
+    border-radius: 0;
+}
+
+.epa-info-box-content {
+    text-align: inherit;
+}
+
+.epa-info-box-title {
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+.epa-info-box-description {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Position Styles */
+.epa-position-left .epa-info-box-wrapper {
+    display: flex;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.epa-position-left .epa-info-box-icon {
+    margin-bottom: 0;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.epa-position-right .epa-info-box-wrapper {
+    display: flex;
+    text-align: right;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+}
+
+.epa-position-right .epa-info-box-icon {
+    margin-bottom: 0;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+/* Testimonial Carousel Widget */
+.epa-testimonial-carousel {
+    position: relative;
+}
+
+.epa-testimonial-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.epa-testimonial-content {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.epa-testimonial-content p {
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.epa-testimonial-rating {
+    margin-bottom: 20px;
+}
+
+.epa-testimonial-rating i {
+    color: #ffc107;
+    margin-right: 2px;
+}
+
+.epa-testimonial-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.epa-testimonial-image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.epa-testimonial-details {
+    text-align: left;
+}
+
+.epa-testimonial-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.epa-testimonial-job {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Swiper Navigation */
+.epa-swiper-button-prev,
+.epa-swiper-button-next {
+    color: #6ec1e4;
+}
+
+.epa-swiper-pagination .swiper-pagination-bullet-active {
+    background: #6ec1e4;
+}
+
+/* Pricing Table Widget */
+.epa-pricing-table {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.epa-pricing-table:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.epa-pricing-table-header {
+    margin-bottom: 30px;
+}
+
+.epa-pricing-table-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.epa-pricing-table-subheading {
+    color: #666;
+    font-size: 14px;
+}
+
+.epa-pricing-table-price {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 5px;
+}
+
+.epa-pricing-table-currency {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.epa-pricing-table-integer-part {
+    font-size: 48px;
+    font-weight: 700;
+    color: #6ec1e4;
+}
+
+.epa-pricing-table-period {
+    font-size: 16px;
+    color: #666;
+}
+
+.epa-pricing-table-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.epa-pricing-table-feature-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.epa-pricing-table-feature-item:last-child {
+    border-bottom: none;
+}
+
+.epa-pricing-table-feature-icon {
+    margin-right: 10px;
+    color: #28a745;
+    flex-shrink: 0;
+}
+
+.epa-pricing-table-feature-text {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.epa-pricing-table-button {
+    display: inline-block;
+    background: #6ec1e4;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.epa-pricing-table-button:hover {
+    background: #5a9bd4;
+    transform: translateY(-2px);
+}
+
+/* Team Member Widget */
+.epa-team-member {
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.epa-team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.epa-team-member-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.epa-team-member-image img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.epa-team-member:hover .epa-team-member-image img {
+    transform: scale(1.05);
+}
+
+.epa-team-member-content {
+    padding: 30px 20px;
+}
+
+.epa-team-member-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.epa-team-member-job {
+    color: #6ec1e4;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.epa-team-member-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.epa-team-member-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.epa-team-member-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    color: #666;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.epa-team-member-social a:hover {
+    background: #6ec1e4;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .epa-position-left .epa-info-box-wrapper,
+    .epa-position-right .epa-info-box-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .epa-position-left .epa-info-box-icon,
+    .epa-position-right .epa-info-box-icon {
+        margin: 0 0 20px 0;
+    }
+    
+    .epa-testimonial-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .epa-testimonial-details {
+        text-align: center;
+    }
+    
+    .epa-pricing-table-price {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .epa-pricing-table-feature-text {
+        text-align: center;
+    }
+}

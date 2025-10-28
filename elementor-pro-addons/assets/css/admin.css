@@ -1,0 +1,275 @@
+/* Elementor Pro Addons Admin Styles */
+
+.epa-admin-wrap {
+    background: #fff;
+    margin: 20px 0;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.epa-admin-wrap h1 {
+    background: linear-gradient(135deg, #6ec1e4 0%, #5a9bd4 100%);
+    color: #fff;
+    margin: 0;
+    padding: 30px;
+    border-radius: 8px 8px 0 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.epa-admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.epa-admin-header-left h2 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.epa-admin-header-left p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.epa-admin-header-right {
+    display: flex;
+    gap: 10px;
+}
+
+.epa-widgets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.epa-widget-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.epa-widget-card:hover {
+    border-color: #6ec1e4;
+    box-shadow: 0 5px 15px rgba(110, 193, 228, 0.1);
+    transform: translateY(-2px);
+}
+
+.epa-widget-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.epa-widget-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #6ec1e4 0%, #5a9bd4 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.epa-widget-icon i {
+    color: #fff;
+    font-size: 20px;
+}
+
+.epa-widget-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.epa-widget-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.epa-widget-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Toggle Switch Styles */
+.epa-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.epa-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.epa-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.epa-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .epa-slider {
+    background-color: #6ec1e4;
+}
+
+input:focus + .epa-slider {
+    box-shadow: 0 0 1px #6ec1e4;
+}
+
+input:checked + .epa-slider:before {
+    transform: translateX(26px);
+}
+
+.epa-admin-footer {
+    padding: 20px 30px;
+    background: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.epa-admin-footer p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Notification Styles */
+.epa-notification {
+    position: fixed;
+    top: 32px;
+    right: 20px;
+    background: #fff;
+    border-left: 4px solid #6ec1e4;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 15px 20px;
+    border-radius: 4px;
+    z-index: 9999;
+    transform: translateX(400px);
+    transition: all 0.3s ease;
+}
+
+.epa-notification.show {
+    transform: translateX(0);
+}
+
+.epa-notification.success {
+    border-left-color: #28a745;
+}
+
+.epa-notification.error {
+    border-left-color: #dc3545;
+}
+
+.epa-notification-content {
+    display: flex;
+    align-items: center;
+}
+
+.epa-notification-icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.epa-notification.success .epa-notification-icon {
+    color: #28a745;
+}
+
+.epa-notification.error .epa-notification-icon {
+    color: #dc3545;
+}
+
+.epa-notification-message {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Loading State */
+.epa-widget-card.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.epa-widget-card.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #6ec1e4;
+    border-radius: 50%;
+    animation: epa-spin 1s linear infinite;
+}
+
+@keyframes epa-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .epa-admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .epa-widgets-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .epa-widget-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .epa-widget-icon {
+        margin: 0 0 15px 0;
+    }
+    
+    .epa-widget-toggle {
+        position: static;
+        margin-top: 15px;
+    }
+}
