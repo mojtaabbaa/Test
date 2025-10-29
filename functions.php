@@ -180,12 +180,20 @@ add_action('widgets_init', 'codegen_pro_widgets_init');
 /**
  * Include theme files
  */
-require_once CODEGEN_PRO_THEME_DIR . '/inc/theme-setup.php';
-require_once CODEGEN_PRO_THEME_DIR . '/inc/customizer.php';
-require_once CODEGEN_PRO_THEME_DIR . '/inc/theme-options.php';
+if (file_exists(CODEGEN_PRO_THEME_DIR . '/inc/theme-setup.php')) {
+    require_once CODEGEN_PRO_THEME_DIR . '/inc/theme-setup.php';
+}
+
+if (file_exists(CODEGEN_PRO_THEME_DIR . '/inc/customizer.php')) {
+    require_once CODEGEN_PRO_THEME_DIR . '/inc/customizer.php';
+}
+
+if (file_exists(CODEGEN_PRO_THEME_DIR . '/inc/theme-options.php')) {
+    require_once CODEGEN_PRO_THEME_DIR . '/inc/theme-options.php';
+}
 
 // Include Elementor support if Elementor is active
-if (defined('ELEMENTOR_VERSION')) {
+if (defined('ELEMENTOR_VERSION') && file_exists(CODEGEN_PRO_THEME_DIR . '/inc/elementor-support.php')) {
     require_once CODEGEN_PRO_THEME_DIR . '/inc/elementor-support.php';
 }
 
@@ -395,16 +403,18 @@ function codegen_pro_performance() {
     remove_action('wp_print_styles', 'print_emoji_styles');
     remove_action('admin_print_scripts', 'print_emoji_detection_script');
     remove_action('admin_print_styles', 'print_emoji_styles');
-    
-    // Remove jQuery migrate
-    function codegen_pro_remove_jquery_migrate($scripts) {
-        if (!is_admin() && isset($scripts->registered['jquery'])) {
-            $script = $scripts->registered['jquery'];
-            if ($script->deps) {
-                $script->deps = array_diff($script->deps, array('jquery-migrate'));
-            }
-        }
-    }
-    add_action('wp_default_scripts', 'codegen_pro_remove_jquery_migrate');
 }
 add_action('init', 'codegen_pro_performance');
+
+/**
+ * Remove jQuery migrate
+ */
+function codegen_pro_remove_jquery_migrate($scripts) {
+    if (!is_admin() && isset($scripts->registered['jquery'])) {
+        $script = $scripts->registered['jquery'];
+        if ($script->deps) {
+            $script->deps = array_diff($script->deps, array('jquery-migrate'));
+        }
+    }
+}
+add_action('wp_default_scripts', 'codegen_pro_remove_jquery_migrate');
